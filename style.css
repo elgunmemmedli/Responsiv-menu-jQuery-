@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#head img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#head p{
+    font: 500 20px 'Comic Neue', cursive;
+}
+#nav{
+    border: 1px solid green;
+    border-radius: 20px;
+    width: 300px;
+    height: 50px;
+}
+#nav input {
+    height: 42px;
+    width: 230px;
+    border: none;
+    line-height: 90px;
+    color: #474747;
+    outline: none;
+    margin-left: 20px;
+    font: 300 20px 'Comic Neue', cursive;
+}
+
+#nav button {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+    height: 42px;
+    font-size: 20px;
+    color: green;
+}
+.menu-icon a{
+    display: none;
+}
+.menu ul{
+    background-color: #a6a6a6;
+    margin-top: 20px;
+    padding: 20px;
+}
+.menu li{
+    list-style: none;
+    display: inline;
+}
+.menu li a{
+    text-decoration: none;
+    padding: 20px;
+    color: #FFF;
+}
+.menu a:hover{
+    background-color: black;
+}.activ{
+    background-color: green;
+}
+
+#content{
+    display: flex;
+    position: relative;
+}
+.responsiv-menu {
+    background-color: #f1f1f1;
+    width: 250px;
+    padding: 0;
+    margin: 0;
+}
+.responsiv-menu p{
+    font: 700 20px  'Comic Neue', cursive;
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+.responsiv-menu li{
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+}
+.responsiv-menu li a{
+    text-decoration: none;
+    color: black;
+    font: 400 20px  'Comic Neue', cursive;
+    user-select: none;
+}
+.responsiv-menu li:hover{
+    background-color: #a6a6a6;
+}
+#h2{
+    margin: 50px 0 0 100px;
+}
+#next, #prev {
+    position: absolute;
+    top: 40%;
+    color: #FFF;
+    cursor: pointer;
+    padding: 0 16px;
+    background-color: green;
+}
+#next{
+    right: 10px;
+}
+#prev{
+    left: 250px;
+}
+#image{
+    margin: 50px 0 0 150px;
+}
+
+@media only screen and (max-width: 927px) {
+    #head p{
+        display: none;
+    }
+    .hide a {
+        display: none;
+    }
+    .menu ul{
+        padding: 15px;
+    }
+   
+   #image{
+       width: 400px;
+   }
+}
+
+@media only screen and (max-width: 1200px){
+#image{
+    margin: 0;
+}
+.menu li a{
+   padding: 20px 10px;
+}
+.responsiv-menu{
+    display: none;
+}
+.menu-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    color: #FFF;
+    user-select: none;
+}
+.menu-icon::before {
+    content: '\f0c9';
+    font-family: fontAwesome;
+    line-height: 40px;
+}
+.menu-icon.active::before {
+    content: '\f00d';
+}
+.responsiv-menu.active{
+    display: block;
+    position: absolute;
+}
+#next, #prev{
+    display: none;
+   }
+
+}
